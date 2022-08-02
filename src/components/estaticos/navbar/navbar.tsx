@@ -20,7 +20,7 @@ function Navbar (){
             <Typography variant="h6" color="inherit">
                 Home
             </Typography>
-        </Box> 
+        </Box>
 
         <Box mx={1} className='cursor' >
             <Typography variant="h6" color="inherit">
