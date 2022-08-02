@@ -12,35 +12,37 @@ function CadastroUsuario(){
     let history = useNavigate();
     const [confirmarSenha,setConfirmarSenha] = useState<String>("")
     const [user, setUser] = useState<User>(
-{
-id: 0,
-nome: '',
-usuario: '',
-senha: ''
-})
+    {  
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: ''
+    })
 
-const [userResult, setUserResult] = useState<User>(
-{
-id: 0,
-nome: '',
-usuario: '',
-senha: ''
-})
-useEffect(() => {
-if (userResult.id != 0) {
-history("/login")
-}
-}, [userResult])
-function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
-setConfirmarSenha(e.target.value)
-}
+    const [userResult, setUserResult] = useState<User>(
+    {
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: ''
+    })
 
-function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-setUser({
-...user,
-[e.target.name]: e.target.value
-})
-}
+    useEffect(() => {
+        if (userResult.id != 0) {
+            history("/login")
+        }
+    }, [userResult])
+    
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+            setConfirmarSenha(e.target.value)
+    }
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUser({
+        ...user,
+            [e.target.name]: e.target.value
+        })
+    }
 
 async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
