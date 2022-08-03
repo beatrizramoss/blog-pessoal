@@ -14,8 +14,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-
-        <Route path="/" element={<Login  />} />
+        
+        <Route path='/' element={<Login  />} />
 
         <Route path="/home" element={<Home />} />
 
@@ -27,8 +27,7 @@ function App() {
 
         <Route path="/postagens" element={<ListaPostagem />} />
 
-
-      </Routes>
+        </Routes>
       <Footer />
     </Router>
 
