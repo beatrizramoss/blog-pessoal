@@ -8,7 +8,7 @@ import UserLogin from '../../models/UserLogin';
 import './Login.css';
 
 function Login () {
-    let navigate = useNavigate();
+    let history = useNavigate();
         
     const [token, setToken] = useLocalStorage('token');
 
@@ -19,8 +19,12 @@ function Login () {
             usuario: '',
             senha: '',
             token: ''
-        }
-        )
+        })
+
+        useEffect(() => {
+            if(token !== "")
+            { history('/home') }
+            }, [token])
 
         function updatedModel(e: ChangeEvent<HTMLInputElement>) {
             setUserLogin({
@@ -29,14 +33,10 @@ function Login () {
             })
         }
 
-        useEffect(()=>{
-            if(token != ''){
-                navigate('/home')
-            }
-        }, [token])
 
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
+
             try{
                 await login(`/usuario/logar`, userLogin, setToken)
 

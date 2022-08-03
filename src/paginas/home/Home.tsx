@@ -1,6 +1,7 @@
 import React from "react";
 import {Grid, Button, Typography} from '@material-ui/core';
 import {Box} from '@mui/material';
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import './Home.css';
 
 
@@ -16,13 +17,14 @@ function Home() {
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
-                        <Button variant="outlined" className='botao'>Veja Nossos Produtos</Button>
+                        <Button variant="outlined" className='botao'>Ver postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
                     <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
                 </Grid>
-                <Grid xs={12} className='produtos'>
+                <Grid xs={12} className='postagens'>
+                   <TabPostagem />
                 </Grid>
             </Grid>
      </>
