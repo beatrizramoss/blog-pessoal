@@ -13,10 +13,10 @@ function App() {
         <Navbar />
           <div style={{ minHeight: '100vh' }}>
             <Routes> // Antigo Switch
-                <Route path='/' element={<Login />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/cadastrousuario' element={<CadastroUsuario />} />
+                <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/cadastrousuario" element={<CadastroUsuario />} />
             </Routes>
           </div>
         <Footer />

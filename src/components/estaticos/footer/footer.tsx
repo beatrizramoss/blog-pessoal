@@ -30,12 +30,7 @@ function Footer (){
                     </Box>
                     <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2020 Copyright:</Typography>
-                        </Box>
-                        <Box>
-                            <a target="_blank">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">Beatriz Ramos</Typography>
-                            </a>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2022 Copyright</Typography>
                         </Box>
                     </Box>
                 </Grid>
