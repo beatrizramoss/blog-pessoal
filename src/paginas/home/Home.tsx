@@ -2,6 +2,7 @@ import React from "react";
 import {Grid, Button, Typography} from '@material-ui/core';
 import {Box} from '@mui/material';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import './Home.css';
 
 
@@ -16,6 +17,7 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem/>
                         </Box>
                         <Button variant="outlined" className='botao'>Ver postagens</Button>
                     </Box>
