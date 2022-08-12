@@ -7,6 +7,7 @@ import './Home.css';
 import { useNavigate, Link } from "react-router-dom";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
+import {toast} from 'react-toastify';
 
 
 function Home() {
@@ -18,7 +19,16 @@ function Home() {
     
     useEffect(() => {
       if (token == "") {
-          alert("Você precisa estar logado")
+          toast.error('Você precisa estar logado', {
+            position: 'top-right',
+            autoClose:1500,
+            hideProgressBar:false,
+            closeOnClick: true,
+            pauseOnHover:false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
           history("/login")
   
       }

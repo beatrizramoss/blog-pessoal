@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
 
 
 
@@ -22,7 +23,16 @@ function ListaPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+        toast.error('Você precisa estar logado', {
+            position: 'top-right',
+            autoClose:1500,
+            hideProgressBar:false,
+            closeOnClick: true,
+            pauseOnHover:false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
       history("/login")
 
     }
